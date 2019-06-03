@@ -1,0 +1,28 @@
+    if num == 1:
+        Button1.config(state="disabled")
+    elif num==2:
+        Button2.config(state="disabled")
+    elif num==3:
+        Button3.config(state="disabled")
+    elif num==4:
+        Button3.config(state="disabled")
+    #second raw
+    elif num==5:
+        Button5.config(state="disabled")
+    elif num==6:
+        Button6.config(state="disabled")
+    elif num==7:
+       Button7.config(state="disabled")
+    elif num==8:
+        Button8.config(state="disabled")
+    # Third row 
+    elif num==9:
+        Button9.config(state="disabled")
+    elif num==10:
+       Button10.config(state="disabled")
+
+    elif num==11:
+        Button11.config(state="disabled")
+
+    else :
+        Button12.config(state="disabled")

@@ -1,0 +1,15 @@
+Button1["background"]="gray" 
+Button2["background"]="gray" 
+Button3["background"]="gray" 
+Button4["background"]="gray" 
+Button5["background"]="gray" 
+Button6["background"]="gray" 
+Button7["background"]="gray" 
+Button8["background"]="gray" 
+Button9["background"]="gray" 
+Button10["background"]="gray" 
+Button11["background"]="gray" 
+Button12["background"]="gray" 
+
+
+Button1.after(1000, lambda:colour())

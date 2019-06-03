@@ -10,40 +10,22 @@ click = []
 t0 = time.time()
 
 def aftertime ():
-    Button1["background"]="black"
-    Button2["background"]="black" 
-    Button3["background"]="black" 
-    Button4["background"]="black" 
-    Button5["background"]="black" 
-    Button6["background"]="black" 
-    Button7["background"]="black" 
-    Button8["background"]="black" 
-    Button9["background"]="black" 
-    Button10["background"]="black" 
-    Button11["background"]="black" 
-    Button12["background"]="black" 
-    Button1.config(state="disabled")
-    Button2.config(state="disabled")
-    Button3.config(state="disabled")
-    Button4.config(state="disabled")
-    Button5.config(state="disabled")
-    Button6.config(state="disabled")
-    Button7.config(state="disabled")
-    Button8.config(state="disabled")
-    Button9.config(state="disabled")
-    Button10.config(state="disabled")
-    Button11.config(state="disabled")
-    Button12.config(state="disabled")
+    Button1["background"]="gray" 
+    Button2["background"]="gray" 
+    Button3["background"]="gray" 
+    Button4["background"]="gray" 
+    Button5["background"]="gray" 
+    Button6["background"]="gray" 
+    Button7["background"]="gray" 
+    Button8["background"]="gray" 
+    Button9["background"]="gray" 
+    Button10["background"]="gray" 
+    Button11["background"]="gray" 
+    Button12["background"]="gray" 
 
 def testfun():
     Button1["background"]="green" 
     Button1.config(state="disabled")
-    
-    testfun().after(1000, lambda:testfun2())
-
-def testfun2():
-    Button1["background"]="gray" 
-    Button1.config(state="normal")
 def match(num):
     points = 0
     click.append(num)
@@ -136,19 +118,10 @@ random.shuffle(arr)
 
 for i in arr:
     j = i %3
-    # if j == 0:
-    #     Button1 = Button(topFrame,  height=5, width=12, bg="gray", command=lambda:match( num = 1))
-    #     Button.pack(side = LEFT)
-    # elif j == 1:
-    #     Button5 = Button(topDown,  height=5, width=12, bg="gray" , command=lambda:match(num =5) )
-    #     Button5.pack(side = LEFT)
-    # else:
-    #     Button11 = Button(topBottom,  height=5, width=12, bg="gray", command=lambda:match(num =11) )
-    #     Button11.pack(side = LEFT)
-
     if i == 1:
         Button1 = Button(topFrame,  height=5, width=12, bg="gray", command=lambda:match( num = 1))
         Button1.pack(side = LEFT)
+
     elif i==2:
         Button2 = Button(topFrame,  height=5, width=12, bg="gray", command=lambda:match(num =2))
         Button2.pack(side = LEFT)
@@ -156,33 +129,33 @@ for i in arr:
         Button3 = Button(topFrame,  height=5, width=12, bg="gray", command=lambda:match(num =3))
         Button3.pack(side = LEFT)
     elif i==4:
-        Button4 = Button(topFrame,  height=5, width=12, bg="gray", command=lambda:match(num =4))
+        Button4 = Button(topFrame,  height=5, width=12, bg=col[j], command=lambda:match(num =4))
         Button4.pack(side = LEFT)
         #second raw
     elif i==5:
-        Button5 = Button(topDown,  height=5, width=12, bg="gray" , command=lambda:match(num =5) )
+        Button5 = Button(topDown,  height=5, width=12, bg=col[j] , command=lambda:match(num =5) )
         Button5.pack(side = LEFT)
     elif i==6:
-        Button6 = Button(topDown,  height=5, width=12, bg="gray" , command=lambda:match(num =6) )
+        Button6 = Button(topDown,  height=5, width=12, bg=col[j] , command=lambda:match(num =6) )
         Button6.pack(side = LEFT)
     elif i==7:
-        Button7 = Button(topDown,  height=5, width=12, bg="gray" , command=lambda:match(num =7) )
+        Button7 = Button(topDown,  height=5, width=12, bg=col[j] , command=lambda:match(num =7) )
         Button7.pack(side = LEFT)
     elif i==8:
-        Button8 = Button(topDown,  height=5, width=12, bg="gray" , command=lambda:match(num =8) )
+        Button8 = Button(topDown,  height=5, width=12, bg=col[j] , command=lambda:match(num =8) )
         Button8.pack(side = LEFT)
         # Third row 
     elif i==9:
-        Button9 = Button(topBottom,  height=5, width=12, bg="gray", command=lambda:match(num =9) )
+        Button9 = Button(topBottom,  height=5, width=12, bg=col[j], command=lambda:match(num =9) )
         Button9.pack(side = LEFT)
     elif i==10:
-        Button10 = Button(topBottom,  height=5, width=12, bg="gray", command=lambda:match(num =10) )
+        Button10 = Button(topBottom,  height=5, width=12, bg=col[j], command=lambda:match(num =10) )
         Button10.pack(side = LEFT)
     elif i==11:
-        Button11 = Button(topBottom,  height=5, width=12, bg="gray", command=lambda:match(num =11) )
+        Button11 = Button(topBottom,  height=5, width=12, bg=col[j], command=lambda:match(num =11) )
         Button11.pack(side = LEFT)
     elif i==12  :
-        Button12 = Button(topBottom,  height=5, width=12, bg="gray", command=lambda:match(num =12) )
+        Button12 = Button(topBottom,  height=5, width=12, bg=col[j], command=lambda:match(num =12) )
         Button12.pack(side = LEFT)
     
     
