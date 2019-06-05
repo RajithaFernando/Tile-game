@@ -8,45 +8,34 @@ points = 0
 matched = []
 clickButton = []
 def showText(num):
+    print("ShowText")
     if num == 1:
         Button1["text"] = "A"
-        clickButton.append(1)
     if num == 2:
         Button2["text"] = "B"
-        clickButton.append(2)
     if num ==3:
         Button3["text"] = "C"
-        clickButton.append(3)
     if num ==4:
         Button4["text"] = "A"
-        clickButton.append(4)
     if num ==5:
         Button5["text"] = "B"
-        clickButton.append(5)
     if num ==6:
         Button6["text"] = "C"
-        clickButton.append(6)
     if num ==7:
         Button7["text"] = "A"
-        clickButton.append(7)
     if num ==8:
         Button8["text"] = "B"
-        clickButton.append(8)
     if num == 9:
         Button9["text"] = "C"
-        clickButton.append(9)
     if num == 10:
         Button10["text"] = "A"
-        clickButton.append(10)
     if num == 11:
         Button12["text"] = "B"
-        clickButton.append(11)
     if num == 12:
         Button12["text"] = "C"
-        clickButton.append(12)
 
 def succes(a,b):
-    
+    print("success")
     if a == 1 or b==1:
         Button1.config(state="disabled")
     if a == 2 or b==2:
@@ -72,8 +61,10 @@ def succes(a,b):
     if a == 12 or b==12:
         Button12.config(state="disabled")
     return showText(a)
+    return showText(b)
 
 def missmatch(a,b):
+    print("Missmatch")
     if a == 1 or b==1:
         Button1.config(state="disabled")
         Button1["text"] = "A"
@@ -124,6 +115,8 @@ def missmatch(a,b):
         Button12.after(2000, lambda:normalState(a,b))
 
 def normalState(a,b):
+    print("Normal State")
+
     if a == 1 or b==1:
         Button1.config(state="normal")
         Button1["text"] = ""
@@ -162,25 +155,28 @@ def normalState(a,b):
         Button12["text"] = "" 
 
 def match(num):
+    print("match")
+    global clickButton
+    clickButton.append(num)
     global clickcount
     clickcount = clickcount + 1
     if clickcount < 2:
         return showText(num)
+        print("Match - clickcount<1")
     else:
-        prevNum = clickButton[-1]
+        prevNum = clickButton[-2]
         a = num % 3
         b = prevNum % 3
-
+        print("Match - clickcount>1")
         if a == b:
             return succes(prevNum,num)
             clickcount = 0
         else:
             print("missmatch")
             return missmatch(prevNum,num)
-
-
             
 def aftertime():
+    print("aftertime")
     Button1["text"] = "Game Over"
     Button2["text"] = "Game Over" 
     Button3["text"] = "Game Over" 
@@ -190,21 +186,21 @@ def aftertime():
     Button7["text"] = "Game Over" 
     Button8["text"] = "Game Over" 
     Button9["text"] = "Game Over" 
-    Button9["text"] = "Game Over" 
-    Button9["text"] = "Game Over" 
-    Button9["text"] = "Game Over"  
-    Button1.config(state="disabled")
-    Button2.config(state="disabled")
-    Button3.config(state="disabled")
-    Button4.config(state="disabled")
-    Button5.config(state="disabled")
-    Button6.config(state="disabled")
-    Button7.config(state="disabled")
-    Button8.config(state="disabled")
-    Button9.config(state="disabled")
-    Button10.config(state="disabled")
-    Button11.config(state="disabled")
-    Button12.config(state="disabled")
+    Button10["text"] = "Game Over" 
+    Button11["text"] = "Game Over" 
+    Button12["text"] = "Game Over"  
+    # Button1.config(state="disabled")
+    # Button2.config(state="disabled")
+    # Button3.config(state="disabled")
+    # Button4.config(state="disabled")
+    # Button5.config(state="disabled")
+    # Button6.config(state="disabled")
+    # Button7.config(state="disabled")
+    # Button8.config(state="disabled")
+    # Button9.config(state="disabled")
+    # Button10.config(state="disabled")
+    # Button11.config(state="disabled")
+    # Button12.config(state="disabled")
 
 
 
