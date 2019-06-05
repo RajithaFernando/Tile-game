@@ -116,7 +116,7 @@ def match(num):
 
 #setting the game window
 window = Tk()
-window.after(10000, lambda: aftertime())
+window.after(6000, lambda: aftertime())
 # limited 10 seconds , then buttons become gray
 window.title("ABC pair game")
 
